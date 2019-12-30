@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
@@ -9,7 +9,13 @@
 
 <ion-content color="">
 
-    <ion-grid>
+  
+  <ion-item >
+    <ion-tab-button (click)="userReg()" >Register User</ion-tab-button>
+    <ion-tab-button (click)="storeReg()">Register Store</ion-tab-button>
+  </ion-item>
+  
+    <ion-grid *ngIf="show">
       <ion-row color="justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
           <div class="ion-text-center">
@@ -26,21 +32,76 @@
               <ion-input name="password"  type="password" placeholder="Password"></ion-input>
             </ion-item> 
             <ion-item>
-              <ion-input name="password"  type="password" placeholder="Password">
+              <ion-input name="password"  type="password" placeholder="Confirm Password">
               </ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Enter your birth place?</ion-label>
+              <ion-label position="floating">Security Question1: Enter your birth place?*</ion-label>
+                 <ion-input></ion-input>
+            </ion-item>
+                 <ion-item>
+                 <ion-label position="floating">Security Question2: In which month you were born?*</ion-label>
                  <ion-input></ion-input>
             </ion-item>
           </div>
           <div class="ion-padding">
-            <ion-button size="large" [disabled]=""  color="success" type="submit"
+            <ion-button size="large" [disabled]=""  color="dark" type="submit"
               expand="block">Register
             </ion-button>
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
+
+
+
+    <ion-grid *ngIf="!show">
+      <ion-row color="justify-content-center">
+        <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="ion-text-center">
+            <h3>Register Your Store</h3>
+          </div>
+          <div class="ion-padding">
+            <ion-item>
+              <ion-input name="storename"  type="text" placeholder="Store Name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="storeaddress"  type="text" placeholder="Store Address"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="storeemail" type="email" placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="spassword" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="scpassword" type="password" placeholder="Confirm Password">
+              </ion-input>
+            </ion-item>
+            <ion-item><h5>Enter Security Questions of your choice</h5></ion-item>
+            <ion-item>
+              <ion-label position="floating">First security question</ion-label>
+              <ion-input name="securty question1 " type="text" placeholder="Question"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Answer here"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Second security question</ion-label>
+              <ion-input name="securty question2 " type="text" placeholder="Question"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Answer here"></ion-input>
+            </ion-item>
+          </div>
+          <div class="ion-padding">
+            <ion-button size="large" [disabled]="" color="dark" type="submit" expand="block">Register
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
 
 </ion-content>

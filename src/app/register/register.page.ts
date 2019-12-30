@@ -8,11 +8,15 @@ import { Router } from '@angular/router';
 })
 export class RegisterPage implements OnInit {
 
+  show: boolean;
   constructor() { }
 
   ngOnInit() {
   }
 
-  
+  userReg(){
+    this.show = true;
+  }
+  storeReg(){this.show = false;}
 
 }

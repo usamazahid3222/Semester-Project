@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -8,11 +8,22 @@
 </ion-header>
 
 <ion-content color="">
+  
+  <ion-card class="welcome-card" >
+    <img src="/assets/vegBazarLogo.png" alt=""/>
+    <ion-card-header>
+      <ion-card-title>Welcome to Veg Bazar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Order Your Vegetables from here.
+      </p>
+    </ion-card-content>
+  </ion-card>
 
     <ion-grid>
       <ion-row color="justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
-
           <div class="ion-padding">
 
             <ion-item>
@@ -21,13 +32,13 @@
           
           </div>
           <div class="ion-padding">
-            <ion-button  size="medium" (click)="signinpage()" color="success" type="submit" expand="block">
+            <ion-button  size="medium" (click)="signinpage()" color="dark" type="submit" expand="block">
               Signin<ion-icon name="log-in"></ion-icon>
             </ion-button>
           </div>
           <div class="ion-padding">
             
-            <ion-button size="medium" (click)="registerpage()" color="success" type="submit" expand="block">
+            <ion-button size="medium" (click)="registerpage()" color="dark" type="submit" expand="block">
               Register<ion-icon name="add-circle-outline"></ion-icon>
             </ion-button>
           </div>
