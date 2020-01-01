@@ -9,13 +9,11 @@ import { Router } from '@angular/router';
 export class HomePage {
 
   constructor(private router: Router) {}
-
-  
-  signinpage() {
+signinpage() {
     this.router.navigateByUrl('/login');
   }
 
-  registerpage(){
+  registrpage(){
     this.router.navigateByUrl('/register');
   }
 

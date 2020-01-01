@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content color="">
- 
+  <form [formGroup]="loginForm">
     <ion-grid>
       <ion-row color="justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
@@ -17,11 +17,11 @@
 
             <ion-item>
               <ion-label position="fixed">Email</ion-label>
-              <ion-input  name="email"  type="email" placeholder="your@email.com"></ion-input>
+              <ion-input  name="email" formControlName="email" type="email" placeholder="your@email.com"></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="fixed">Password</ion-label>
-              <ion-input name="password"  type="password" placeholder="Password"></ion-input>
+              <ion-input name="password" formControlName="password"  type="password" placeholder="Password"></ion-input>
             </ion-item>
           </div>
 
@@ -30,12 +30,12 @@
            </div>
 
           <div class="ion-padding">
-            <ion-button size="large" [disabled]=""  color="dark" type="submit" expand="block">Login
+            <ion-button size="large" [disabled]="" (click)="save()"  color="dark" type="submit" expand="block">Login
             </ion-button>
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
-
+  </form>
 </ion-content>
 
